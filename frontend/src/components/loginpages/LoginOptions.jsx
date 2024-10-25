@@ -5,7 +5,7 @@ const LoginOptions = ({ blockyTextStyle }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-center items-center h-auto">
+    <div className="flex justify-center items-center h-auto" style={blockyTextStyle}>
       <div
         className="space-y-6 bg-white bg-opacity-10 p-20 rounded-lg"
         style={blockyTextStyle}

@@ -10,7 +10,6 @@ const UserLogin = () => {
 
   const blockyTextStyle = {
     fontFamily: "Nasalization",
-    textShadow: "2.25px 2.25px 0px rgba(0, 0, 0, 0.3)",
   };
 
   const handleSubmit = async (e) => {
@@ -39,7 +38,7 @@ const UserLogin = () => {
       >
         <source src="/src/assets/18327-291012897.mp4" type="video/mp4" />
       </video>
-      <div className="flex justify-center items-center h-screen relative">
+      <div className="flex justify-center items-center h-screen relative" style={blockyTextStyle}>
         <div className="flex justify-center w-auto shadow-lg rounded-lg overflow-hidden">
           <div className="bg-gray-500 bg-opacity-65 px-28 py-10">
             <h1 className="text-white text-2xl font-bold mb-6">User Login</h1>

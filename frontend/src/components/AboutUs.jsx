@@ -3,8 +3,12 @@ import LoginOptions from "./loginpages/LoginOptions";
 
 export default function AboutUs() {
 
+  const blockyTextStyle = {
+    fontFamily: "Nasalization",
+  };
+
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gray-100 p-4">
+    <div className="relative w-full h-screen overflow-hidden bg-gray-100 p-4" style={blockyTextStyle}>
       <video
         src="/src/assets/138770-770553751.mp4"
         autoPlay

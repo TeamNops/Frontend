@@ -11,7 +11,6 @@ const CompanySignup = () => {
 
   const blockyTextStyle = {
     fontFamily: "Nasalization",
-    textShadow: "2.25px 2.25px 0px rgba(0, 0, 0, 0.3)",
   };
 
   const handleSubmit = async (e) => {
