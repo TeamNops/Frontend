@@ -7,7 +7,6 @@ import AboutUs from "./AboutUs"
 import InfoPage from "./InfoPage"
 
 export default function Home() {
-
   const ref = React.useRef(null);
   const isInView = useInView(ref);
 
@@ -16,7 +15,7 @@ export default function Home() {
   }
 
   const gradientTextStyle = {
-    background: 'linear-gradient(to right, rgb(224, 231, 255), rgb(79, 70, 229))', // Indigo-100 to Indigo-600
+    background: 'linear-gradient(to right, rgb(224, 231, 255), rgb(79, 70, 229))',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
@@ -24,7 +23,7 @@ export default function Home() {
   }
 
   const subtitleGradientStyle = {
-    background: 'linear-gradient(to right, rgb(67, 56, 202), rgb(199, 210, 254))', // Indigo-200 to Indigo-700
+    background: 'linear-gradient(to right, rgb(67, 56, 202), rgb(199, 210, 254))',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
@@ -40,15 +39,22 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <div className="relative h-screen overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          className="absolute inset-0 w-full h-full object-cover"
+      <div className="relative h-screen overflow-hidden bg-black">
+        <motion.div
+          initial={{ x: '-100%', y: '100%', scale: 2 }}
+          animate={{ x: 0, y: 0, scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full"
         >
-          <source src="/src/assets/23882-338327769.mp4" type="video/mp4" />
-        </video>
+          <video
+            autoPlay
+            muted
+            loop
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/src/assets/23882-338327769.mp4" type="video/mp4" />
+          </video>
+        </motion.div>
 
         <div className="relative z-10 flex h-full">
           <div
@@ -58,7 +64,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
             >
               <h1 
                 className="text-4xl sm:text-6xl lg:text-9xl text-center"
@@ -76,7 +82,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 100 }} // Start from bottom (positive y value)
+              initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
             >
@@ -95,7 +101,7 @@ export default function Home() {
             style={blockyTextStyle}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
           >
             <h1 
               className="text-2xl sm:text-4xl lg:text-6xl text-center"
