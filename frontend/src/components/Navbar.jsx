@@ -46,13 +46,6 @@ const Navbar = () => {
           <Link to="/"></Link>
           NOps
         </button>
-        <a
-          href="/login"
-          className="px-5 text-xl transition-transform duration-200 hover:scale-110"
-          style={blockyTextStyle}
-        >
-          Login
-        </a>
       </div>
       <div className="inline-flex text-xl space-x-5" style={blockyTextStyle}>
         <a
