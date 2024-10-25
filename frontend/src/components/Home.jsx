@@ -1,16 +1,34 @@
-'use client'
-
 import React from "react"
 import { ReactTyped } from "react-typed"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import AboutUs from "./AboutUs"
 import InfoPage from "./InfoPage"
 
 export default function Home() {
+
+  const ref = React.useRef(null);
+  const isInView = useInView(ref);
+
   const blockyTextStyle = {
     fontFamily: "Nasalization",
+  }
+
+  const gradientTextStyle = {
+    background: 'linear-gradient(to right, rgb(224, 231, 255), rgb(79, 70, 229))', // Indigo-100 to Indigo-600
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent'
+  }
+
+  const subtitleGradientStyle = {
+    background: 'linear-gradient(to right, rgb(67, 56, 202), rgb(199, 210, 254))', // Indigo-200 to Indigo-700
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+    color: 'transparent'
   }
 
   const handleCheckItOut = () => {
@@ -38,32 +56,37 @@ export default function Home() {
             style={blockyTextStyle}
           >
             <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-            <h1 className="text-4xl sm:text-6xl lg:text-9xl text-indigo-500 text-center">MERCURY</h1>
-            <h2 className="text-base sm:text-lg lg:text-3xl text-indigo-200 mt-2 sm:mt-5 italic text-center">
-              <ReactTyped
-                strings={["Supercharge Your Workflows"]}
-                typeSpeed={50}
-                cursorChar=""
-              />
-            </h2>
+              <h1 
+                className="text-4xl sm:text-6xl lg:text-9xl text-center"
+                style={{...blockyTextStyle, ...gradientTextStyle}}
+              >
+                MERCURY
+              </h1>
+              <h2 className="text-base sm:text-lg lg:text-3xl text-indigo-200 mt-2 sm:mt-5 italic text-center">
+                <ReactTyped
+                  strings={["Supercharge Your Workflows"]}
+                  typeSpeed={50}
+                  cursorChar=""
+                />
+              </h2>
             </motion.div>
 
             <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
+              initial={{ opacity: 0, y: 100 }} // Start from bottom (positive y value)
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
             >
-            <button
-              className="text-lg sm:text-xl lg:text-4xl text-indigo-300 mt-8 sm:mt-16 lg:mt-72 ml-44 flex items-center space-x-2 animate-pulse bg-transparent"
-              onClick={handleCheckItOut}
-            >
-              <span>Check It Out!</span>
-              <FontAwesomeIcon icon={faArrowDown} />
-            </button>
+              <button
+                className="text-lg sm:text-xl lg:text-4xl text-indigo-300 mt-8 sm:mt-16 lg:mt-72 ml-44 flex items-center space-x-2 animate-pulse bg-transparent hover:text-indigo-200 transition-colors duration-300"
+                onClick={handleCheckItOut}
+              >
+                <span>Check It Out!</span>
+                <FontAwesomeIcon icon={faArrowDown} />
+              </button>
             </motion.div>
           </div>
 
@@ -74,7 +97,10 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <h1 className="text-2xl sm:text-4xl lg:text-6xl text-indigo-300 text-center">
+            <h1 
+              className="text-2xl sm:text-4xl lg:text-6xl text-center"
+              style={{...blockyTextStyle, ...subtitleGradientStyle}}
+            >
               An AI Powered Productivity Platform
             </h1>
           </motion.div>
