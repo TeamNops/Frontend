@@ -5,6 +5,7 @@ import UserLogin from './components/UserLogin';
 import UserWork from './components/UserWork';  // Import the new UserWork component
 import CompanyLogin from './components/CompanyLogin';
 import CompanySignup from './components/CompanySignup';
+import TaskAssignment from './components/TaskAssignment';  // 
 import CompanyAddMember from './components/CompanyAddMember'; // New component
 import CompanyPanel from './components/CompanyPanel';  // Import CompanyPanel
 import './styles.css';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/company/:companyId/panel" element={<CompanyPanel />} />
         <Route path="/company/:companyId/add-member" element={<CompanyAddMember />} />
         <Route path="/user/:userId/work" element={<UserWork />} />
+        <Route path="/company/:companyId/assign-task" element={<TaskAssignment />} />
       </Routes>
     </Router>
   );
