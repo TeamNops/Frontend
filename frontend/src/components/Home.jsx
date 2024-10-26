@@ -42,7 +42,7 @@ export default function Home() {
       <div className="relative h-screen overflow-hidden bg-black">
         <motion.div
           initial={{ x: '-100%', y: '100%', scale: 2 }}
-          animate={{ x: 0, y: 0, scale: 1 }}
+          animate={{ x: 120, y: 0, scale: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
           className="absolute inset-0 w-full h-full"
         >
@@ -75,7 +75,7 @@ export default function Home() {
               <h2 className="text-base sm:text-lg lg:text-3xl text-indigo-200 mt-2 sm:mt-5 italic text-center">
                 <ReactTyped
                   strings={["Supercharge Your Workflows"]}
-                  typeSpeed={50}
+                  typeSpeed={30}
                   cursorChar=""
                   startDelay={2500}
                 />
