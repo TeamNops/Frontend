@@ -8,9 +8,9 @@ const SlideTwo = () => {
 
   return (
     <div className='flex flex-col' style={blockyTextStyle}>
-      <h1 className='text-6xl justify-start items-center mb-5'>Personalized Road Map</h1>
+      <h1 className='text-6xl justify-start items-center mb-5'>Online Meet Transcript</h1>
       <h1 className='text-xl justify-start items-center mb-[26vh]'>
-      A Personalized Road Map for Students
+      Competitive environment for user todolist. 
       </h1>
 
     </div>

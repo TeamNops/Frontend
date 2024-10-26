@@ -8,9 +8,9 @@ const SlideOne = () => {
 
   return (
     <div className='flex flex-col' style={blockyTextStyle}>
-      <h1 className='text-6xl justify-start items-center mb-5'>Quiz</h1>
+      <h1 className='text-6xl justify-start items-center mb-5'>SWOT ANALYSIS</h1>
       <h1 className='text-xl justify-start items-center mb-44'>
-        A personalized testing system which dynamically adjusts the difficulty of questions based on your performance.
+        A personalized weekly report of the employee which give you overall feedback of their performance.
       </h1>
     </div>
   );

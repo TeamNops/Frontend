@@ -5,6 +5,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { motion, useInView } from "framer-motion"
 import AboutUs from "./AboutUs"
 import InfoPage from "./InfoPage"
+import VoiceflowBot from "./VoiceflowBot";
 
 export default function Home() {
   const ref = React.useRef(null);
@@ -121,6 +122,9 @@ export default function Home() {
       <div id="about-us-section">
         <AboutUs/>
       </div>
+      <VoiceflowBot /> 
     </div>
+   
+   
   )
 }

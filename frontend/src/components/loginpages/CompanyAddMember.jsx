@@ -48,7 +48,7 @@ const CompanyAddMember = () => {
       <div className="flex justify-center items-center h-screen relative">
         <div className="flex w-auto shadow-lg rounded-lg overflow-hidden">
           <div className="bg-gray-500 bg-opacity-65 px-28 py-10">
-            <h1 className="text-white text-2xl font-bold mb-6">Add Members to Company: {companyId}</h1>
+            <h1 className="text-white text-2xl font-bold mb-6">Add Members to Company </h1>
             <div className="space-y-4 mb-6">
               <div>
                 <label className="block text-gray-300 text-md mb-2 italic">Member's Email</label>

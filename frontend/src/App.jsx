@@ -6,10 +6,11 @@ import UserWork from './components/UserWork';  // Import the new UserWork compon
 import CompanyLogin from './components/loginpages/CompanyLogin';
 import CompanySignup from './components/loginpages/CompanySignup';
 import TaskAssignment from './components/TaskAssignment';  // 
+import UserTasks from './components/UserTasks';
 import CompanyAddMember from './components/loginpages/CompanyAddMember'; // New component
 import CompanyPanel from './components/CompanyPanel';  // Import CompanyPanel
 import Navbar from './components/Navbar';
-
+import UserPerformance from './components/UserPerformance';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,8 @@ function App() {
         <Route path="/company/:companyId/add-member" element={<CompanyAddMember />} />
         <Route path="/user/:userId/work" element={<UserWork />} />
         <Route path="/company/:companyId/assign-task" element={<TaskAssignment />} />
+        <Route path="/user-task/:userId" element={<UserTasks />} />
+        <Route path="/company/:companyId/worker-performance" element={<UserPerformance />} />
       </Routes>
     </BrowserRouter>
   );

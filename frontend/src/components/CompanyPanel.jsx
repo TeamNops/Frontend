@@ -72,7 +72,7 @@ const CompanyPanel = () => {
       </video>
       <div className="flex justify-center items-center h-screen relative">
         <div className="bg-gray-500 bg-opacity-65 px-28 py-10 rounded-lg shadow-lg">
-          <h1 className="text-white text-2xl font-bold mb-2">Company Panel for {companyId}</h1>
+          <h1 className="text-white text-2xl font-bold mb-2">Company Panel </h1>
           <p className="text-gray-300 mb-8 animate-pulse">Manage your company operations</p>
 
           <div className="space-y-10">
