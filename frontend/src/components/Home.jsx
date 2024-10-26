@@ -64,7 +64,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 1.5 }}
             >
               <h1 
                 className="text-4xl sm:text-6xl lg:text-9xl text-center"
@@ -77,6 +77,7 @@ export default function Home() {
                   strings={["Supercharge Your Workflows"]}
                   typeSpeed={50}
                   cursorChar=""
+                  startDelay={2500}
                 />
               </h2>
             </motion.div>
@@ -84,7 +85,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 2.5 }}
             >
               <button
                 className="text-lg sm:text-xl lg:text-4xl text-indigo-300 mt-8 sm:mt-16 lg:mt-72 ml-44 flex items-center space-x-2 animate-pulse bg-transparent hover:text-indigo-200 transition-colors duration-300"
@@ -101,7 +102,7 @@ export default function Home() {
             style={blockyTextStyle}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1.7 }}
           >
             <h1 
               className="text-2xl sm:text-4xl lg:text-6xl text-center"
